@@ -40,13 +40,13 @@ switch (name) {
     <div class="header">
       <span style="font-size: 30px; font-weight: 700">{{ navShow }}</span>
       <span style="position: absolute; right: 0px"
-        ><span
+        ><el-button
+          type="primary"
           v-if="!tokenStore.token"
           style="font-size: 15px"
           @click="router.push('/login')"
-          >登录</span
+          >登录</el-button
         >
-        &nbsp;&nbsp;
         <span v-else style="font-size: 15px; font-weight: 700">
           你好，name </span
         >&nbsp;</span
@@ -58,12 +58,16 @@ switch (name) {
 <style lang="scss" scoped>
 .navbar {
   width: 100%;
-  height: 7vh;
+  height: 60px;
   margin-bottom: 4vh;
   background-color: rgb(255, 255, 255);
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgb(95, 95, 95);
+  border-bottom: 2px solid rgb(199, 199, 199);
   .header {
-    line-height: 7vh;
-    border-bottom: 2px solid rgb(199, 199, 199);
+    height: 100%;
+    line-height: 60px;
     position: relative;
   }
 }

@@ -9,9 +9,14 @@ const recruitJobDetailService = (jobid) => {
   return request.get(`/recruitment/job/${jobid}`)
 }
 // 用户申请投递
-const recruitApplyService = ({ jobid, userid, token }) => {
-  return request.post(`/recruitment/job/${jobid}/apply/${userid}`, {
-    token
+const recruitApplyService = ({ acadmy, major, id, name, job, phoneNumber }) => {
+  return request.post(`/recruitment/job/apply`, {
+    acadmy,
+    major,
+    id,
+    name,
+    job,
+    phoneNumber
   })
 }
 

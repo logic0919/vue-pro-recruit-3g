@@ -55,7 +55,7 @@ const router = createRouter({
       component: applyHandle
     },
     {
-      path: '/applyList/:jobId',
+      path: '/applyList/:jobId/:jobName',
       name: 'applyList',
       component: applyList
     },

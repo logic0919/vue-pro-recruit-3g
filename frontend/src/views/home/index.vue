@@ -33,6 +33,8 @@ const recruitJobs = async () => {
   }
 }
 recruitJobs()
+
+// import { recruitJobsService } from '@/api/recruit'
 </script>
 
 <template>

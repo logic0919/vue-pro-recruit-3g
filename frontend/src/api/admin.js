@@ -13,18 +13,30 @@ const adminJobDetailService = (jobid) => {
   return request.get(`/admin/job/${jobid}`)
 }
 // 查看职位申请
-const adminApplicationsService = (jobid) => {
+const adminAppService = (jobid) => {
   return request.get(`/admin/applications/${jobid}`)
 }
+const adminAppAllService = () => {
+  return request.get('/admin/applications/all')
+}
+const adminAppUnhandleService = (jobid) => {
+  return request.get(`/admin/applications/unhandle/${jobid}`)
+}
+const adminAppUnhandleAllService = () => {
+  return request.get('/admin/applications/unhandle')
+}
 // 审批或拒绝职位申请 + 自动发送录取短信
-const adminHandleService = (appid) => {
-  return request.get(`/admin/application/${appid}`)
+const adminHandleService = (list) => {
+  return request.get('/admin/application', { list })
 }
 
 export {
   adminDashboardService,
   adminJobsService,
   adminJobDetailService,
-  adminApplicationsService,
+  adminAppService,
+  adminAppAllService,
+  adminAppUnhandleService,
+  adminAppUnhandleAllService,
   adminHandleService
 }

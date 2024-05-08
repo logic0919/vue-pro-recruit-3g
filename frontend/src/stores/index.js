@@ -7,3 +7,4 @@ export default pinia
 
 export * from '@/stores/modules/token'
 export * from '@/stores/modules/id'
+export * from '@/stores/modules/tableData'
